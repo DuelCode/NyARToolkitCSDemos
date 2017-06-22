@@ -1,0 +1,8 @@
+﻿<Window x:Class="WPFCaptureTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"  Width="800" Height="600">
+    <Grid>
+        <Image  Name="image1" Stretch="None" SnapsToDevicePixels="True"/>
+    </Grid>
+</Window>

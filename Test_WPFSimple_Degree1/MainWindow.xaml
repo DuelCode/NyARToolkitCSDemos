@@ -1,0 +1,68 @@
+﻿<Window x:Class="Test_WPFSimple_Degree1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_WPFSimple_Degree1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="632" Width="1109">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Width="800" Height="600" Background="Silver" Grid.RowSpan="2">
+            <Image Name="ImgMainZm" Stretch="None" SnapsToDevicePixels="True"
+                RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Canvas x:Name="CvMainZm" Width="800" Height="600" VerticalAlignment="Center"/>
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="20">
+                <TextBlock x:Name="TbkPoint1Zm"/>
+                <TextBlock x:Name="TbkPoint2Zm"/>
+                <TextBlock x:Name="TbkPoint3Zm"/>
+                <TextBlock x:Name="TbkPoint4Zm"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Button Content="Start" Width="80" x:Name="BtnStartZm"/>
+                <Button Content="Pause" Width="80" x:Name="BtnPauseZm" Margin="5,0"/>
+                <Button Content="Clear" Width="80" x:Name="BtnClearZm" Margin="5,0"/>
+            </StackPanel>
+            <ScrollViewer x:Name="SvMainZm" Grid.Column="1" HorizontalScrollBarVisibility="Disabled"
+                          Grid.Row="1">
+                <ListBox x:Name="LbxResultZm">
+
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Border Height="100" Background="#FFF70707" 
+                     Margin="149,51,141,150" RenderTransformOrigin="0.5, 1">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform x:Name="BdrAnchorZm" Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

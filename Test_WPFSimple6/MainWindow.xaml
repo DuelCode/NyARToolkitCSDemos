@@ -1,0 +1,32 @@
+﻿<Window x:Class="Test_WPFSimple6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+         Title="MainWindow" Height="632" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Width="800" Height="600" Background="Silver">
+            <Image Name="ImgMainZm" Stretch="None" SnapsToDevicePixels="True"
+                RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Canvas x:Name="CvMainZm" Width="800" Height="600" VerticalAlignment="Center"/>
+        </Grid>
+        
+        <ScrollViewer x:Name="SvMainZm" Grid.Column="1" HorizontalScrollBarVisibility="Disabled">
+            <ListBox x:Name="LbxResultZm">
+
+            </ListBox>
+        </ScrollViewer>
+        
+    </Grid>
+</Window>
