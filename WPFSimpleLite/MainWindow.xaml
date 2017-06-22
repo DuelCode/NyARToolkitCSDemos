@@ -1,0 +1,15 @@
+﻿<Window x:Class="WPFSimpleLite.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Width="800" Height="600">
+    <Grid>
+        <Canvas>
+            <Image  Name="image1" Stretch="None" SnapsToDevicePixels="True" />
+            <Polygon Name="recognizedTag" Visibility="Hidden"  
+                     SnapsToDevicePixels="True" Fill="Violet" Opacity="0.8" Stroke="Red"/>
+        </Canvas>
+        <Canvas  x:Name="CvMainZm">
+            
+        </Canvas>
+    </Grid>
+</Window>
